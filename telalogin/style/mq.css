@@ -15,6 +15,7 @@
     section#login>div#formulario{
         float: right;
         width: 70%;
+        margin-top: 70px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -32,6 +33,7 @@
     section#login>div#formulario{
         float: left;
         width: 50%;
+        margin-top: 60px;
     }
     div#formulario>h1{
        font-size: 2em;
