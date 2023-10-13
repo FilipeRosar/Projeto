@@ -5,4 +5,48 @@ Azul-escuro = #2B4446
 Verde = #638549
 Amarelo = #D5A651*/
 
+:root{
+    --corAzul:#2B4446;
+    --corVerde:#638549;
+    --corAmarela:#D5A651;
+}
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body, html{
+    background-color: var(--corAmarela);
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 
+    background-color: var(--corVerde);
+    width: 250px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+}
+section#login>div#imagem{
+    display: block;
+    background: var(--corAmarela) url(../image/pexels-caique-araujo-15705995.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 200px;
+}
+section#login>div#formulario{
+    display: block;
+    padding: 10px;
+}
