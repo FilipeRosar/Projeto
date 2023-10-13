@@ -41,7 +41,7 @@ section#login{
 }
 section#login>div#imagem{
     display: block;
-    background: var(--corAmarela) url(../image/pexels-caique-araujo-15705995.jpg) no-repeat;
+    background: var(--corAmarela) url(../image/pexels-valentin-s-589808.jpg) no-repeat;
     background-position: top center;
     background-size: cover;
     height: 200px;
