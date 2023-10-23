@@ -1,0 +1,47 @@
+@charset "UTF-8";
+*{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0; 
+}
+.banner h1{
+    display: block;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: transparent;
+    background: -webkit-linear-gradient(#33A8D8, #1472B7);
+    background-clip:text;
+    -webkit-background-clip: text;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.banner{
+    height: 600px;
+    background-image: url('../images/banner.png'), linear-gradient(rgb(0, 0, 0), rgb(35, 88, 110), rgb(0, 0, 0));
+    background-size: cover;
+    padding-top: 60px;
+    border-bottom: 1px solid #33A8DB80;
+    background-position: center center;
+}
+.conteudo-banner{
+    width: 600px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+.logo{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
