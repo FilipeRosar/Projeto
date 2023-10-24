@@ -4,26 +4,29 @@
     box-sizing: border-box;
     margin: 0; 
 }
-.banner h1{
-    display: block;
-    font-size: 2.5em;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: transparent;
-    background: -webkit-linear-gradient(#33A8D8, #1472B7);
-    background-clip:text;
-    -webkit-background-clip: text;
-}
+
 p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size: 1.25em;
+    max-width: 100%;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
 }
+.banner p{
+    font-size: 1.25em;
+    margin: 16px 0 24px;
+}
+
 img{
     overflow-clip-margin: content-box;
     overflow: clip;
+}
+.logo{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:drop-shadow(5px 5px 10px rgb(0, 0, 0)) ;
 }
 .banner{
     height: 600px;
@@ -38,10 +41,126 @@ img{
     margin: auto;
     color: white;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.185);
 }
-.logo{
-    margin: auto;
+.conteudo-banner p{
+    font-size: 20px;
+}
+.banner h1{
+    display: block;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: transparent;
+    background: -webkit-linear-gradient(#33A8D8, #1472B7);
+    background-clip:text;
+    -webkit-background-clip: text;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0.212);
+    border: 2px solid #1472B7;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 16px 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+button a{
+    text-decoration: none;
+    color: #33A8D8;
+}
+button:hover{
+    background-color: #a5d9ee;
+    color: #0389e9;
+}
+main{
+    background-color: black;
+}
+section{
+    margin: 1px auto;
+}
+
+#conteudo{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border: 1px solid #0389e9;
+    padding: 80px;
+}
+#conteudo .lista-modulo{
+    margin: 24px 0;
+}
+div{
+    margin: auto;
+    width: 800px;
+    text-align: center;
+}
+h2{
+    color: #33A8D8;
+    padding: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.lista-modulo .modulo{
+    color: white;
+    width: 530px;
+    margin: 0 auto 25px;
+    border: 1px solid #33A8D8;
+    background-color: #252525;
+    padding: 16px;
+    border-radius: 50px;
+    box-shadow: inset -5px 6px 8px rgba(0, 0, 0, 0.7);
+}
+.modulo:hover{
+    background-color: #666363;
+}
+span{
+    color: #33A8D8;
+}
+.texto{
+    text-align: center;
+}
+.modulo{
+    color: white;
+    margin: 24px 0;
+}
+#transforme{
+    height: 560px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../images/woman-code.png);
+    border-top: 1px solid #33A8D8;
+    border-bottom:1px solid #33A8D8 ;
+    padding: 200px;
+    position: relative;
+}
+#transforme p{
+    font-weight: 900;
+    font-size: 2.5em;
+    text-transform: lowercase;
+    max-width: 250px;
+    text-align: left;
+    text-shadow: 3px 2px #33A8D8;
+}
+#desafios{
+    text-align: center;
+    width: 900px;
+    border-bottom: 1px solid #33A8D8;
+}
+#desafios img{
+    margin: 32px 0;
+}
+footer{
+    padding: 60px;
+    text-align: center;
+    background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+}
+footer a{
+    color: #33A8D8;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
 }
