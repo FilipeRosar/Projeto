@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#navegador{
+    padding: 0px 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#foto{
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    
+}
+.barra {
+    display: flex; 
+    align-items: center; 
+}
+.bar{
+    padding-top: 15px;
+}
+
+.youtube_logo {
+    margin-left: 30px;
+    padding-top: 15px;
+}
+.barrapasquisa {
+    display: flex; 
+    align-items: center; 
+    padding-top: 10px;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+#ipesquisa {
+    margin-right: 0px; 
+    height: 40px;
+    width: 100%;
+}
+#pesquisa {
+    width: 57px; 
+    height: 40px;
+    border: 1px solid rgba(83, 83, 83, 0.438);
+    border-radius: 5px; 
+}
+#pesquisa:hover{
+    background-color: rgba(211, 211, 211, 0.596);
+}
+
+.icones img{
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 24px;
+    height: 24px;
+}
+#ivideo{
+    padding: 40px 40px 0px;
+}
+h1{
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.titulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.titulos .canal{
+    display: flex;
+    height: 32px;
+    width: 106px;
+    margin:0 20px 10px;
+    padding: 0px 40px;
+    flex-wrap: nowrap;
+    flex-direction: row; 
+    align-items: center; 
+}
+.titulos .dio {
+    margin-right: 10px; 
+}
+.dono{
+    font-size: 14px;
+}
+.like, .dislike, .share, .download {
+    background-color: transparent; 
+    color: black; 
+    border: 1px solid black; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 3px; 
+    margin: 5px; 
+    font-weight: bold; 
+}
+
+.inscreva {
+    height: 40px;
+    width: 159px;
+    padding: 30px 40px;
+    text-align: center;
+    background-color: #383030;
+    border: none; 
+    border-radius: 15px;
+}
+.download {
+    background-color: #333; 
+}
