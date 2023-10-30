@@ -38,17 +38,20 @@ body{
 }
 
 #ipesquisa {
+    border: 1px solid black;
     margin-right: 0px; 
     height: 40px;
     width: 100%;
+    border-radius: 10px 0px 0px 10px;
 }
-#pesquisa {
+#botao_pesquisa {
     width: 57px; 
-    height: 40px;
+    height: 41px;
     border: 1px solid rgba(83, 83, 83, 0.438);
-    border-radius: 5px; 
+    border-left: none;
+    border-radius: 0px 25px 25px 0px; 
 }
-#pesquisa:hover{
+#botao_pesquisa:hover{
     background-color: rgba(211, 211, 211, 0.596);
 }
 
@@ -57,6 +60,9 @@ body{
     padding-left: 15px;
     width: 24px;
     height: 24px;
+}
+main{
+    width: 60%;
 }
 #ivideo{
     padding: 40px 40px 0px;
@@ -67,47 +73,45 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
-.titulos{
+#titulos{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0px 40px 0px;
+    
 }
-.titulos .canal{
+.dio{
+    margin-right: 9px;
+}
+.conjunto{
     display: flex;
-    height: 32px;
-    width: 106px;
-    margin:0 20px 10px;
-    padding: 0px 40px;
-    flex-wrap: nowrap;
-    flex-direction: row; 
-    align-items: center; 
 }
-.titulos .dio {
-    margin-right: 10px; 
+#inputs{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.dono{
-    font-size: 14px;
+.inscreva{
+    padding: 10px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #c4302b; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.like, .dislike, .share, .download {
-    background-color: transparent; 
-    color: black; 
-    border: 1px solid black; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    border-radius: 3px; 
-    margin: 5px; 
-    font-weight: bold; 
+.inscreva:hover {
+    background-color: #ff0000;
 }
-
-.inscreva {
-    height: 40px;
-    width: 159px;
-    padding: 30px 40px;
-    text-align: center;
-    background-color: #383030;
-    border: none; 
-    border-radius: 15px;
-}
-.download {
-    background-color: #333; 
+.icones_likes{
+    margin-left: auto;
+   display: flex;
+   justify-content: end;
+   gap: 40px;
 }
