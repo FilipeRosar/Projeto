@@ -3,8 +3,9 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
 #navegador{
-    padding: 0px 25px;
+    padding: 0px 5%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -31,7 +32,7 @@ body{
     display: flex; 
     align-items: center; 
     padding-top: 10px;
-    width: 50%;
+    width: 70%;
     max-width: 600px;
     margin: 0 auto;
     
@@ -61,57 +62,81 @@ body{
     width: 24px;
     height: 24px;
 }
-main{
-    width: 60%;
+iframe{
+    padding: 50px 20px 0px 50px;
+    border-radius: 10px;
 }
-#ivideo{
-    padding: 40px 40px 0px;
+
+.sidebar{
+    display:  inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 42px;
+    gap: 11px;
+    float: right;
+    }
+.conjunto{
+    padding-top:10px ;
+    display: flex;
+    height: 90px;
+    align-items: center;
+    gap: 13px;
+}
+.infos{
+    height: auto;
+    font-size: 14px
+}
+.nome_video{
+    font-weight: bolder;
+}
+.thumbs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 94px;
+    width: 160px;
+}
+.nome_video{
+    font-weight: bolder;
+}
+#thumb1{
+    background-image: url(assets/img/image\ 12.png);
+}
+#thumb2{
+    background-image: url(assets/img/image\ 13.png);
+}
+#thumb3{
+    background-image: url(assets/img/image\ 14.png);
+}
+#thumb4{
+    background-image: url(assets/img/image\ 15.png);
+}
+#thumb5{
+    background-image: url(assets/img/Thumb.png);
 }
 h1{
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-left: 40px;
 }
-#titulos{
+#informacao{
+    display: flex;
+    margin-left: 45px;
+    gap: 10px;
+}
+#acoes_video {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+}
+
+.botoes {
+    display: flex;
+    max-width: 540px; 
+}
+
+.botoes button {
     display: flex;
     align-items: center;
-    padding: 0px 40px 0px;
-    
-}
-.dio{
-    margin-right: 9px;
-}
-.conjunto{
-    display: flex;
-}
-#inputs{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.inscreva{
-    padding: 10px 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #c4302b; 
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.inscreva:hover {
-    background-color: #ff0000;
-}
-.icones_likes{
-    margin-left: auto;
-   display: flex;
-   justify-content: end;
-   gap: 40px;
+    margin: 5px;
 }
