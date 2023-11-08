@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 24px;
+    align-items: center;
+}
+.menus{
+    display: flex;
+    gap: 5px;
+}
+.icones{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+.foto{
+    border-radius: 34px;
+}
+.barra_pesquisa{
+    display: flex;
+    width: 404px;
+    height: 40px;
+    padding-top: 6px;
+}
+.barra{
+    width: 29vw;
+    height: 40px;
+    max-width: 1000px;
+    border: 1px solid rgb(70, 69, 69);
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+}
+button{
+    width: 57px;
+    height: 40px;
+    border: 1px solid rgb(70, 69, 69);
+    border-radius: 0px 15px 15px 0;
+}
