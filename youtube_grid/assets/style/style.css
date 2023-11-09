@@ -96,6 +96,9 @@ aside{
     gap: 10px;
 }
 @media (max-width: 768px) {
+    aside{
+        display: none;
+    }
     .conteudo {
         grid-template-columns: 1fr; 
     }
