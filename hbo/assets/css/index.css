@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+@import url(../js/javascrips.js);
 *{
     margin: 0;
     padding: 0;
@@ -40,38 +41,45 @@
     color: white;
 }
 
+.button{
+    padding: 16px 24px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
 .menu{
     display: flex;
     width: 100%;
     padding: 12px 16px;
     position: fixed;
-    background-color: var(--primary-color);
+    top: 0;
+    background: var(--nav-bg-color);
     align-items: center;
     justify-content: space-between;
-}
-.button{
-    padding: 16px 24px;
-    border: none;
-    border-radius: 500px;
-    background-color: var(--tertiary-color);
-    
+    z-index: 1;
 }
 .menu a{
     color: white;
 
 }
-.menu__item--button{
-    padding: 10px 24px;
-    background: var(--tertiary-color);
-}
-.menu__item--button::before{
-    content: "";
-    background-color: var(--btn-bg-color-gradient);
+.menu__item--button {
+    padding: 8px 26px;
+    transition: background 1s, color 1s;
+  }
+.menu__item--button:hover{
+    background-color: white;
+    color: black;
 }
 .menu__logo-image{
     width: 100%;
-    height: 27px;
     padding-left: 15px;
+}
+.menu__logo{
+    max-width: 160px;
 }
 .menu__item{
     margin-right: 24px;
@@ -81,10 +89,21 @@
     text-decoration: none;
     letter-spacing: 2px;
 }
+
 .header{
-    padding-top: 55px;
-    background: linear-gradient(-45deg, #3b1e63, #020228);
-    animation: gradient 5s ease infinite alternate;
+    position: relative;
+    padding: 100px 0 300px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+.header::after{
+    content: "";
+    width: 100%;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+    height: 200px;
+    position: absolute;
+    bottom: 0;
 }
 .header__content {
     margin: auto;
@@ -93,6 +112,217 @@
     align-items: center;
     gap: 40px;
     padding: 0 20px; 
+}
+.header__channels{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.header__title{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+.header__title--light{
+    display: block;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.divider{
+    width: 70%;
+    height: 5px;
+    max-width: 650px;
+    background: var(--divider-bg-color);
+}
+p{
+    font-family: Quicksand;
+}
+.offer{
+    font-size: 1.6rem;
+}
+.offer__price{
+    font-size: 2.5rem;
+    font-family: "Ralaway", sans-serif;
+    font-weight: bolder;
+}
+.offer__price--small{
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.header__button{
+    background: var(--btn-bg-color-gradient);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 16px 40px;
+    animation: wiggle 2.2s linear infinite; 
+}
+
+.button.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+  }
+  
+.button.button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+  .text--small{
+    max-width: 300px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+/* Main */
+
+.subscription{
+    background: url(../img/background-movies-series.png);
+    background-size: cover;
+    position: relative;
+}
+
+.container{
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+    max-width: 1200px;
+}
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.subscription__plans{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 40px 0;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+.subscription__card{
+    display: flex;
+    min-height: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--card-bg-color);
+    padding: 40px 60px;
+    border-radius: 15px;
+    transition: transform 1s ease-in-out;
+}
+.subscription__plan{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+.subscription__price{
+    color: var(--secondary-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.subscription__description{
+    text-align: left;
+    list-style: none;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    font-size: 1.2rem;
+}
+.subscription__description::marker{
+    content: "+";
+    font-size: 2rem;
+}
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2){
+    transform: rotateY(45deg);
+} 
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1){
+    transform: rotateY(45deg);
+}
+.contents{
+    margin: 100px auto;
+}
+.contents__container{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 40px;
+}
+.contents__card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+  }
+.contents__card:hover {
+    transform: scale(1.09);
+    border: 2px solid var(--tertiary-color);
+}
+.contents__card:hover .contents__image {
+    opacity: 0;
+}
+ 
+.contents__image{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 1s;
+}
+.contents__card:nth-child(1):hover{
+    background-image: url(../img/hbo-hover_0.webp);
+}
+.contents__card:nth-child(2):hover{
+    background-image: url(../img/MAX-Hover.webp);
+}
+.contents__card:nth-child(3):hover{
+    background-image: url(../img/DC-Hover.webp);
+}
+.contents__card:nth-child(4):hover{
+    background-image: url(../img/WB-Hover.webp);
+}
+.contents__card:nth-child(5):hover{
+    background-image: url(../img/CN-Hover.png);
+}
+.contents__card:nth-child(6):hover{
+    background-image: url(../img/UCL-Hover.webp);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.footer__link{
+    font-family: "Runaway", sans-serif;
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+
+}
+.footer__link:hover{
+    color: var(--btn-link-bg-color);
+}
+.footer__legal{
+    color: var(--link-color);
+    font-size: 0.7rem;
+    margin: 16px 0;
+}
+.footer__social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
  /* Custom Scroll */
 
@@ -109,17 +339,6 @@
     background: var(--secondary-color);
   }
 
-  @media screen and (max-width: 768px) {
-    .header__content {
-        padding: 0 10px; /* Ajuste o espaçamento lateral para telas ainda menores */
-    }
-
-    .menu {
-        padding: 10px; /* Ajuste o espaçamento do menu para telas menores */
-    }
-}
-
-
 @keyframes gradient {
     0%{
         background-position: 0% 50%;
@@ -129,5 +348,85 @@
     }
     100%{
         background-position:0% 50% ;
+    }
+}
+@keyframes wiggle {
+    0%{
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%, 100%{
+        transform: rotate(0 );
+    }
+}
+@media screen and (max-width: 1200px) {
+    .subscription__plans{
+        gap: 40px;
+    }
+    .contents__container{
+        gap: 32px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    .subscription__plans{
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscription__card{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contents__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 480px) {
+    body{
+        height: auto;
+    }
+    .login__actions .button{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .login__link{
+        margin: 0;
+    }
+    .subscription__price{
+        font-size: 1.5rem;
+    }
+    .subscription__description{
+        font-size: 1rem;
+    }
+    .subscription__plan{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .subscription__card{
+        padding: 40px;
+    }
+    .contents__container{
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+    .menu {
+        padding: 25px 15px;
+        flex-direction: column;
+        gap: 24px;
     }
 }
