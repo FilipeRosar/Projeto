@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', 'sans-serif';
+}
+.header .photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.header .title{
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+.information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.information p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+.information p::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .4rem;
+}
+.information .contact a{
+    text-decoration: none;
+    color: white;
+}
+.information .email a{
+    text-decoration: none;
+    color: white;
+}
+.information .job::before{
+    background-image: url(../img/icons/icone.svg);
+}
+.information .location::before{
+    background-image: url(../img/icons/map.svg);
+}
+.information .contact::before{
+    background-image: url(../img/icons/contato.svg);
+}
+.information .email::before{
+    background-image: url(../img/icons/email.svg);
+}
+@media screen  and (min-width: 768px){
+    
+    .header{
+        display: grid;
+        grid-template-areas: 
+        "photo title"
+        "photo information";
+    }
+    .header .photo{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .title{
+        grid-area: title;
+        text-align: end;
+    }
+    .header .information{
+        grid-area: information;
+    }
+}

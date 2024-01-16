@@ -1,0 +1,38 @@
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.portfolio li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
+.portfolio li span{
+    font-weight: bold;
+}
+.portfolio li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.portfolio li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.portfolio .github::before{
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+    background-image: url(../img/icons/github-icon.svg);
+}

@@ -1,0 +1,36 @@
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+.skills .tools ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills .tools ul li img{
+    max-width: 50px;
+    margin: .5rem;
+} 
+.skills .personal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.skills .personal ul li{
+    margin-left: 2rem;
+    padding: .5rem;
+}
+@media screen and (min-width: 768px) {
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

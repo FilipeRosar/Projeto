@@ -1,0 +1,25 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(225,82,235);
+    background: radial-gradient(circle, rgba(225, 82, 235, 0.623) 0%, rgba(82,137,235,1) 100%);
+    color: white;
+}
+/* html,body{
+    height: 100%;
+} */
+.main{
+    margin: .5rem;
+    padding: .5rem;
+    border: 1.5px solid white;
+    border-radius: .7rem;
+}
+@media screen  and (min-width: 768px){
+    .main{
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+}
