@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body{
+    text-align: center;
+    font-family: 'Open Sans', 'sans-serif';
+}
+.quadrado{
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    padding: 2.5rem;
+    margin: .5rem;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    font-size: 3.75rem;
+    background: #d3d3d3;
+    color: lightgray;
+    cursor: pointer;
+}
+.jogador, .vencedor{
+    font-size: 2rem;
+    margin-top: .6rem;
+}
+button{
+    margin-top: .6rem;
+    width: 6.25rem;
+    height: 2.1rem;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .quadrado{
+        width: 1rem;
+        height: 1rem;
+        padding: 1.25rem;
+        font-size: 1.875rem;
+    }
+    .jogador, .vencedor{
+        font-size: 1rem;
+    }
+    button{
+        width: 5.125rem;
+        height: 2.05rem;
+    }
+}
