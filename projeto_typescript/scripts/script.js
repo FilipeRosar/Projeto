@@ -6,6 +6,10 @@
         const sec = Math.floor((mil % 60000) / 1000);
         return `${min}m e ${sec}s `;
     }
+    function formatarData(data) {
+        const date = new Date(data);
+        return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+    }
     function patio() {
         function ler() {
             return localStorage.patio ? JSON.parse(localStorage.patio) : [];
@@ -19,13 +23,13 @@
             row.innerHTML = `
             <td>${veiculo.nome}</td>
             <td>${veiculo.placa}</td>
-            <td>${veiculo.entrada}</td>
+            <td>${formatarData(veiculo.entrada.toString())}</td>
             <td>
                 <button class="delete" data-place="${veiculo.placa}">X</button>
             </td>
-            `;
+        `;
             (_a = row.querySelector(".delete")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
-                remover(this.dataset.placa);
+                remover(this.dataset.place);
             });
             (_b = $("#patio")) === null || _b === void 0 ? void 0 : _b.appendChild(row);
             if (salva)

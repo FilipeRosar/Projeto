@@ -14,8 +14,14 @@ interface Veiculo{
 
         return `${min}m e ${sec}s `;
     }
+    function formatarData(data: string) {
+        const date = new Date(data);
+        return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+    }
+    
 
     function patio(){
+        
         function ler(): Veiculo[]{
             return localStorage.patio ? JSON.parse(localStorage.patio): [];
         }
@@ -28,15 +34,17 @@ interface Veiculo{
             row.innerHTML = `
             <td>${veiculo.nome}</td>
             <td>${veiculo.placa}</td>
-            <td>${veiculo.entrada}</td>
+            <td>${formatarData(veiculo.entrada.toString())}</td>
             <td>
                 <button class="delete" data-place="${veiculo.placa}">X</button>
             </td>
-            `;
+        `;
+        
 
-            row.querySelector(".delete")?.addEventListener("click", function() {
-                remover(this.dataset.placa);
-            });
+        row.querySelector(".delete")?.addEventListener("click", function() {
+            remover(this.dataset.place);
+        });
+        
 
             $("#patio")?.appendChild(row);
 
