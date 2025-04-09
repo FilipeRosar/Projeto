@@ -15,6 +15,9 @@ namespace xadrez_console.tabuleiro
             Cor = cor;
             QteMovimento = 0;
         }
-
+        public void IncrementarQtdMovimentos()
+        {
+            QteMovimento++;
+        }
     }
 }

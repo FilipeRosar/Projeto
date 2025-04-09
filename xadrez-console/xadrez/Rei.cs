@@ -14,7 +14,7 @@ namespace xadrez_console.xadrez
         }
         public override string ToString()
         {
-            return "R";
+            return Cor == Cor.Branca ? "♖" : "♜";
         }
     }
 }
