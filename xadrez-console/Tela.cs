@@ -7,7 +7,7 @@ namespace xadrez_console
     {
         public static void imprimirTabuleiro(Tabuleiro tabuleiro)
         {
-            for (int i = 0; i < tabuleiro.Linha; i++)
+            for (int i = 0; i < tabuleiro.Linhas; i++)
             {
                 for (int j = 0; j < tabuleiro.Colunas; j++)
                 {
