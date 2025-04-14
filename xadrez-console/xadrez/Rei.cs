@@ -76,7 +76,7 @@ namespace xadrez_console.xadrez
                 mat[pos.Linha, pos.Coluna] = true;
             }
             return mat;
-        }
+        } 
     }
 
 
