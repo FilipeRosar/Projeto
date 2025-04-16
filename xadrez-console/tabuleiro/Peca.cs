@@ -38,6 +38,7 @@ namespace xadrez_console.tabuleiro
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
+        
         public abstract bool[,] MovimentosPossiveis();
         
     }
